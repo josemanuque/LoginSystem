@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    @auth Bienvenido {{ Auth :: user()->name}} @endauth
+                    @auth Bienvenido {{ Auth :: user()->username}}, ha hecho login {{ Auth :: user()->login_count}} veces @endauth
                 </div>
             </div>
         </div>

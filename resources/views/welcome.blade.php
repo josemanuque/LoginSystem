@@ -25,13 +25,19 @@
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                        <a href="{{ url('/home') }}" class="underline text-gray-900 dark:text-white">Home</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
+                        @else
+                            <<div class="d-flex justify-content-between" style="width:200px;">
+                                <div class="p-2">
+                                <a href="{{ route('login') }}" class="underline text-gray-900 dark:text-white">Log in</a>
+                                </div>
+                                @if (Route::has('register'))
+                                <div class="p-2">
+                                    <a href="{{ route('register') }}" class="underline text-gray-900 dark:text-white">Register</a>
+                                </div>
+                                @endif
+                            </div>
                     @endauth
                 </div>
             @endif
@@ -45,6 +51,9 @@
                     </svg>
                 </div>
 
+                <h1 class="text-gray-900 dark:text-white"> Login System </h1>
+                <div class="mt-2 text-gray-600 dark:text-gray-400 h4">
+                                    Feel free to try the register and login function</div>
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
